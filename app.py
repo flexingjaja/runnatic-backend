@@ -51,9 +51,14 @@ def generate():
         ax.axis('equal')
 
         # Les Textes
+        # Nom de la course
         fig.text(0.5, 0.18, race_name.upper(), color='white', fontsize=35, fontweight='bold', ha='center')
+        
+        # Temps
         fig.text(0.5, 0.12, race_time, color=user_color, fontsize=30, fontweight='bold', ha='center', fontname='Monospace')
-        fig.text(0.5, 0.08, "RUNNATIC OFFICIAL FINISHER", color='#555555', fontsize=12, ha='center', letter_spacing=2)
+        
+        # Copyright (CORRIGÉ : J'ai retiré letter_spacing)
+        fig.text(0.5, 0.08, "RUNNATIC OFFICIAL FINISHER", color='#555555', fontsize=12, ha='center')
 
         # 4. Sauvegarder dans la mémoire tampon (RAM)
         img_io = io.BytesIO()
